@@ -60,6 +60,8 @@ app.get('/', (req, res) => {
   res.render('home', { restaurant: RESTAURANT })
 })
 
-app.listen(3000, () => {
-  console.log('Server is running on local host 3000')
+app.get('/menu', (req, res) => {
+  res.render('menu', { menu: RESTAURANT.menu })
 })
+
+app.listen(3000)
