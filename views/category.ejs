@@ -5,8 +5,8 @@ include('partials/nav') %>
 <ul>
   <% menuItems.forEach(item => { %>
   <li>
-    <h3><%= item.name %></h3>
-    <p>Price: $<%= item.price %></p>
+    <h3><%= item.name %> <% if (item.rating === 5) { %> ⭐ <% } %></h3>
+    <p>Price: $<%= item.price.toFixed(2) %></p>
     <p>Rating: <%= item.rating %> stars</p>
     <p><%= item.details %></p>
   </li>

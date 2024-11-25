@@ -7,7 +7,7 @@ include('partials/nav') %>
 <ul>
   <% menu.filter(item => item.category === 'mains').forEach(item => { %>
   <li>
-    <h3><%= item.name %></h3>
+    <h3><%= item.name %> <% if (item.rating === 5) { %> ⭐ <% } %></h3>
     <p>Price: $<%= item.price.toFixed(2) %></p>
     <p>Rating: <%= item.rating %> stars</p>
     <p><%= item.details %></p>
@@ -19,7 +19,7 @@ include('partials/nav') %>
 <ul>
   <% menu.filter(item => item.category === 'desserts').forEach(item => { %>
   <li>
-    <h3><%= item.name %></h3>
+    <h3><%= item.name %> <% if (item.rating === 5) { %> ⭐ <% } %></h3>
     <p>Price: $<%= item.price.toFixed(2) %></p>
     <p>Rating: <%= item.rating %> stars</p>
     <p><%= item.details %></p>
@@ -31,7 +31,7 @@ include('partials/nav') %>
 <ul>
   <% menu.filter(item => item.category === 'sides').forEach(item => { %>
   <li>
-    <h3><%= item.name %></h3>
+    <h3><%= item.name %> <% if (item.rating === 5) { %> ⭐ <% } %></h3>
     <p>Price: $<%= item.price.toFixed(2) %></p>
     <p>Rating: <%= item.rating %> stars</p>
     <p><%= item.details %></p>
